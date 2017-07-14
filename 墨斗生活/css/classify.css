@@ -1,0 +1,35 @@
+body { background: #eee; }
+
+#outerWrap { position: relative; width: 100%; }
+#outerWrap #top .find { background: url(../img/2_search.png) no-repeat center center; background-size: .3rem; }
+#outerWrap .navBar { width: 100%; height: .8rem; position: relative; }
+#outerWrap .navBar .menu { width: 100%; height: .8rem; display: flex; align-items: center; position: fixed; top: .88rem; background: #fff; }
+#outerWrap .navBar .menu > li { flex: 1; height: 100%; display: flex; align-items: center; border-bottom: .02rem solid #ccc; box-sizing: border-box; font-size: .3rem; }
+#outerWrap .navBar .menu > li > div { width: 100%; height: .5rem; display: flex; align-items: center; justify-content: center; border-right: .01ren solid #f1f1f1; letter-spacing: .03rem; }
+#outerWrap .navBar .menu > li > div b { width: .14rem; height: .08rem; margin-left: .1rem; background: url(../img/1_arr.png) no-repeat center center; background-size: .14rem .08rem; }
+#outerWrap .navBar .menu > li > div .active2 { background: url(../img/1_arr1.png) no-repeat center center; background-size: .14rem .08rem; }
+#outerWrap .navBar .menu .active1 { border-bottom: .02rem solid #FF7141; color: #FF7141; }
+#outerWrap .navBar .grayLayout { width: 100%; height: calc(100vh - 1.68rem); background: rgba(0, 0, 0, 0.5); position: fixed; top: 1.68rem; }
+#outerWrap .navBar .grayLayout .content { width: 100%; background: #fff; }
+#outerWrap .navBar .grayLayout .content .item { width: 100%; height: 3.5rem; overflow-y: auto; border-bottom: .01rem solid #ccc; }
+#outerWrap .navBar .grayLayout .content .item li { width: 100; height: .7rem; line-height: .7rem; padding: 0 .2rem; box-sizing: border-box; }
+#outerWrap .navBar .grayLayout .content .item li i { display: block; border-bottom: .01rem solid #eee; }
+#outerWrap .navBar .grayLayout .content .item .active { background: #eee; }
+#outerWrap .navBar .grayLayout .content .open { height: .6rem; display: flex; justify-content: center; align-items: center; }
+#outerWrap .navBar .grayLayout .content .open span { display: inline-block; width: .52rem; height: .22rem; background: url(../img/1_xiala.png) no-repeat center center; background-size: .52rem .22rem; margin: .1rem auto; }
+#outerWrap .jobList { width: 100%; background: #fff; }
+#outerWrap .jobList > ul { width: 100%; font-size: .26rem; color: #333; }
+#outerWrap .jobList > ul li { width: 100%; padding: .2rem .2rem .2rem .4rem; box-sizing: border-box; border-bottom: .01rem solid #f1f1f1; }
+#outerWrap .jobList > ul li > div { display: flex; justify-content: space-between; margin-bottom: .2rem; }
+#outerWrap .jobList > ul li > div .salary { color: #f60; }
+#outerWrap .jobList > ul li > div .company { width: 60%; height: .35rem; }
+#outerWrap .jobList > ul li > div .company i { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-word; }
+#outerWrap .jobList > ul li > div p { display: flex; align-items: center; }
+#outerWrap .jobList > ul li > div p i { width: 100%; margin-right: .1rem; }
+#outerWrap .jobList > ul li > div p b { display: inline-block; width: .12rem; height: .2rem; margin-left: .1rem; }
+#outerWrap .jobList > ul li .positions { font-size: .3rem; }
+
+@media screen and (min-width: 1000px) { .menu { width: 1000px !important; margin: 0 auto !important; }
+  .grayLayout { width: 1000px !important; margin: 0 auto !important; } }
+
+/*# sourceMappingURL=classify.css.map */

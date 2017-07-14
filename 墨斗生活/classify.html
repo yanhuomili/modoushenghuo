@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>职位</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classify.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">生产工</div>
+				<div class="empty find"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="navBar">
+				<ul class="menu">
+					<li class="">
+						<div>
+							<i>区域</i>
+							<b class=""></b>
+						</div>
+					</li>
+					<li>	
+						<div>
+							<i>全部</i>
+							<b></b>
+						</div>	
+					</li>
+					<li>
+						<div>
+							<i>类型</i>
+							<b></b>
+						</div>	
+					</li>
+					<li>
+						<div>
+							<i>福利</i>
+							<b></b>
+						</div>	
+					</li>
+				</ul>
+				<div class="grayLayout">
+					<div class="content">
+						<ul class="item quyu">
+							<li class="active"><i>所有区域</i></li>
+							<li><i>白云区</i></li>
+							<li><i>天河区</i></li>
+							<li><i>番禺区</i></li>
+							<li><i>越秀区</i></li>
+							<li><i>越秀区</i></li>
+							<li><i>越秀区</i></li>
+							<li><i>越秀区</i></li>
+							<li><i>黄浦区</i></li>
+						</ul>
+						<ul class="item quanbu">
+							<li class="active">全职</li>
+							<li>兼职</li>
+						</ul>
+						<ul class="item leixing">
+							<li class="active">生产工</li>
+							<li>销售</li>
+							<li>技工</li>
+							<li>司机</li>
+						</ul>
+						<ul class="item fuli">
+							<li class="active">五险一金</li>
+							<li>带薪年假</li>
+							<li>地铁沿线</li>
+							<li>包吃住</li>
+						</ul>
+						<div class="open">
+							<span></span>
+						</div>
+					</div>
+					
+					
+				</div>
+			</section>	
+			<section class=""></section>
+			<section class="jobList">
+				<ul class="">
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.grayLayout,.item').hide();
+				//筛选
+				$('.menu li').singleTap(function(){
+					var index=$(this).index();
+					$(this).addClass('active1').find('b').addClass('active2');//改变文字和边框颜色
+					$(this).siblings().removeClass('active1').find('b').removeClass('active2');//改变三角颜色
+					$('.grayLayout').show().find('.item').eq(index).show().siblings().not('div').hide();
+				})
+				
+				//选择区域
+				$('.item').on('singleTap','li',function(){
+					$(this).addClass('active').siblings().removeClass('active');
+//					return false;//阻止冒泡
+				})
+				//点击灰层隐藏
+				$('.grayLayout').singleTap(function(){
+					$(this).hide().find('.item').hide();
+				})
+			})	
+		</script>
+	</body>
+</html>

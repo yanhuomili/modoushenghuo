@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*重置样式*/
+body, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, p, ol, mark, b, em, strong, i { margin: 0; padding: 0; font-style: normal; font-weight: normal; }
+
+body { font-size: 0.28rem; font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+
+a { text-decoration: none; color: black; }
+
+i, em, b, strong, mark { font-style: normal; }
+
+img { display: block; width: 100%; height: 100%; }
+
+li { list-style: none; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+#outerWrap #top { width: 100%; height: .88rem; padding: 0 .2rem; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; background: #ff7143; position: fixed; top: 0; }
+#outerWrap #top .goBack { width: .4rem; height: .5rem; background: url(../img/1_return.png) no-repeat left center; background-size: .15rem .26rem; }
+#outerWrap #top .title { width: 1.4rem; height: .5rem; text-align: center; font-size: .34rem; color: #fff; }
+#outerWrap #top .empty { width: .4rem; height: .5rem; }
+#outerWrap #topFill { width: 100%; height: .88rem; }
+
+@media screen and (min-width: 1000px) { #outerWrap { width: 1000px !important; margin: 0 auto !important; }
+  #top { width: 1000px !important; margin: 0 auto !important; } }
+body { background: #f1f1f1; }
+
+/*# sourceMappingURL=reset.css.map */

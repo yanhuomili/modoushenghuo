@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>职位信息</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jobInformation.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">职位信息</div>
+				<div class="empty share"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<div class="basics">
+					<p class="zhiwei"><i>销售专员</i><b class="collect"></b></p>
+					<p class="salary">3000-8000元/月</p>
+					<p class="address">广州苹果公司(总部)</p>
+					<ul class="fuli">
+						<li><em class=""></em><span>五险一金</span></li>
+						<li><em class=""></em><span>包吃包住</span></li>
+						<li><em class=""></em><span>房补</span></li>
+						<li><em class=""></em><span>车补</span></li>
+						<li><em class=""></em><span>节日福利</span></li>
+						<li><em class=""></em><span>带薪年假</span></li>
+						<li><em class=""></em><span>加班补贴</span></li>
+					</ul>
+				</div>
+				<div class="release">
+					<p><i>发布时间:</i><b>2017.06.15</b></p>
+					<p><i>浏览数:</i><b>20</b></p>
+				</div>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.search').attr('placeholder')
+				$('.del').click(function(){
+					$('.search').val('').focus();
+				})
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>
