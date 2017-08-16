@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的借支</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myBorrow.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">我的借支</div>
+				<div class="empty"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<div class="user">
+					<p><i class="userPic"><img src="img/head.jpg"/></i><span>张菲菲</span></p>
+					<b class="apply active">借支申请</b>
+				</div>
+				<div class="bankInfo">
+					<i>绑定银行卡</i>
+					<p class="changeInfo"><span>更改信息</span><b></b></p>
+					<em class="binding"></em>
+				</div>
+				<div class="record">
+					<h3><i><img src="img/record-line.jpg"/></i><span>借支记录</span></h3>
+					<ul class="recordList">
+						<li>
+							<p><i>借支<b>600</b>元</i><em>2017-7-17</em></p>
+							<span class="active1">已打款</span>
+						</li>
+						<li>
+							<p><i>借支<b>600</b>元</i><em>2017-7-17</em></p>
+							<span class="active4">申请中</span>
+						</li>
+						<li>
+							<p><i>借支<b>600</b>元</i><em>2017-7-17</em></p>
+							<span class="active2">不通过</span>
+						</li>
+						<li>
+							<p><i>借支<b>600</b>元</i><em>2017-7-17</em></p>
+							<span class="active3">已还款</span>
+						</li>
+						<li>
+							<p><i>借支<b>600</b>元</i><em>2017-7-17</em></p>
+							<span class="active3">已还款</span>
+						</li>
+					</ul>
+				</div>
+				
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.changeInfo').hide();
+				
+				//绑定银行卡
+				$('.binding').click(function(){
+					$(this).hide();
+					$('.changeInfo').show();
+					window.location="bankCard.html";
+				})
+				
+				//借支申请
+				$('.apply').click(function(){
+					window.location="jiezhishenqing.html";
+				})
+			})
+		</script>
+	</body>
+</html>

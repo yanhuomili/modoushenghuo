@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/my.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">我的</div>
+				<div class="empty"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<div class="user">
+					<i class="userPic"><img src="img/my-pic.jpg"/></i>
+					<p><span>张菲菲</span><b>最大的挑战和突破在于用人，而用人最大的优势在于</b></p>
+				</div>
+				<ul class="menu">
+					<li class="photo">
+						<p><i><img src="img/my-1.jpg"/></i><span>个人相册</span></p>
+						<b></b>
+					</li>
+					<li class="collect">
+						<p><i><img src="img/my-2.jpg"/></i><span>我的收藏</span></p>
+						<b></b>
+					</li>
+					<li class="jiezhi">
+						<p><i><img src="img/my-3.jpg"/></i><span>我的借支</span></p>
+						<b></b>
+					</li>
+					<li class="share">
+						<p><i><img src="img/my-4.jpg"/></i><span>分享</span></p>
+						<b></b>
+					</li>
+					<li class="about">
+						<p><i><img src="img/my-5.jpg"/></i><span>关于我们</span></p>
+						<b></b>
+					</li>
+					<li class="system">
+						<p><i><img src="img/my-6.jpg"/></i><span>系统设置</span></p>
+						<b></b>
+					</li>
+				</ul>
+				
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.changeInfo').hide();
+				
+				$('.sureBtn').click(function(){
+					alert('确定申请');
+				})
+				//选择银行
+				$('.selectBank').click(function(){
+					$('.bankList').show();
+				})
+				$('.bankList li').click(function(){
+					var val=$(this).text();
+					$('.bank').text(val);
+					$('.bankList').hide();
+				})
+				$('.binding').click(function(){
+					$(this).hide();
+					$('.changeInfo').show();
+				})
+				
+				$('.user').click(function(){
+					window.location="personalInfomation.html";
+				})
+				$('.photo').click(function(){
+					window.location="photos.html";
+				})
+				$('.collect').click(function(){
+					window.location="myCollection.html";
+				})
+				$('.jiezhi').click(function(){
+					window.location="myBorrow.html";
+				})
+				$('.about').click(function(){
+					window.location="about.html";
+				})
+				$('.system').click(function(){
+					window.location="systemSet.html";
+				})
+			})
+		</script>
+	</body>
+</html>

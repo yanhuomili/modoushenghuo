@@ -1,0 +1,54 @@
+@charset "utf-8";
+body{
+    background: #f1f1f1;
+}
+#outerWrap{
+    width:100%;
+    #top{
+        .confirm{
+            width:.8rem;
+            color: #fff;
+            text-align: right;
+        }
+    }
+        
+    .content{
+        width:100%;
+        padding: .3rem 0 0;
+        box-sizing: border-box;
+        .menu{
+            width:100%;
+            li{
+                width:100%;
+                height: 1rem;
+                margin-bottom: .01rem;
+                padding: 0 .4rem;
+                background: #fff;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                p{
+                    height:100%;
+                    margin-right:.9rem;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        width:.36rem;
+                        height:.36rem;
+                        margin-right: .2rem;
+                        box-sizing: border-box;
+                        border: .02rem solid #999;
+                        border-radius: 50%;
+                    }
+                    .active{
+                        background: url(../img/sex-select.jpg) no-repeat center center;
+                        background-size: .36rem;
+                        border: 0;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+

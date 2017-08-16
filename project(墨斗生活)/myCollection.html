@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myCollection.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">我的收藏</div>
+				<div class="empty edit">编辑</div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<section class="fenlei">
+					<div class="left active">
+						<p><span class="unCompleted">职位收藏</span></p>
+					</div>
+					<div class="right ">
+						<p><span class="completed">企业收藏</span></p>
+					</div>
+				</section>
+				<section class="fenleiFill"></section>
+				<div class="swiper-container">
+					<div class="swiper-wrapper w">
+						<div class="swiper-slide">
+							<div class="jobList">
+								<ul class="list">
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>销售顾问</i><span>广州苹果公司(总部)</span></div>
+											<p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>销售顾问</i><span>广州苹果公司(总部)</span></div>
+											<p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>销售顾问</i><span>广州苹果公司(总部)</span></div>
+											<p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>销售顾问</i><span>广州苹果公司(总部)</span></div>
+											<p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>销售顾问</i><span>广州苹果公司(总部)</span></div>
+											<p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p>
+										</div>	
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="companyList">
+								<ul class="list">
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>广州苹果公司(总部)</i></div>
+											<p><i>地址:</i><span>广州市白云区云城西路89州市白云区云城西路89号M8创意园A栋401C</span></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>广州苹果公司(总部)</i></div>
+											<p><i>地址:</i><span>广州市白云区云城西路89州市白云区云城西路89号M8创意园A栋401C</span></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>广州苹果公司(总部)</i></div>
+											<p><i>地址:</i><span>广州市白云区云城西路89州市白云区云城西路89号M8创意园A栋401C</span></p>
+										</div>	
+									</li>
+									<li>
+										<p class="choose"><i class="chooseOne"></i></p>
+										<div>
+											<div class="positions"><i>广州苹果公司(总部)</i></div>
+											<p><i>地址:</i><span>广州市白云区云城西路89州市白云区云城西路89号M8创意园A栋401C</span></p>
+										</div>	
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<dl class="bottom">
+					<dt>
+						<i class="chooseAll"></i>
+						<span>全选</span>
+					</dt>
+					<dd class="del">删除</dd>
+				</dl>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/swiper.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('.bottom').hide();
+				var myswiper=new Swiper('.swiper-container',{
+					scrollbarHide:true,
+//					slidesPerView: 'auto',
+					autoHeight:true,
+					onTransitionEnd:function(swiper){
+						var index=myswiper.activeIndex;
+						$('.fenlei>div').eq(index).addClass('active').siblings().removeClass('active');
+						//执行滑屏后重新渲染页面高度，并且高度将由内容撑开
+//						$('.w').css('transform', 'translate3d(0px, 0px, 0px)');
+						$('.swiper-container .swiper-slide-active').css({'height':'auto'}).siblings('.swiper-slide').css('height','0px');
+						myswiper.update();
+					}
+				})
+				//分类切换
+				$('.fenlei>div').on('singleTap',function(){
+					var index=$(this).index();
+					myswiper.slideTo(index);
+					//执行滑屏后重新渲染页面高度，并且高度将由内容撑开
+//						$('.w').css('transform', 'translate3d(0px, 0px, 0px)');
+					$('.swiper-container .swiper-slide-active').css('height','auto').siblings('.swiper-slide').css('height','0px');
+					myswiper.update();
+				})
+				
+				//编辑列表
+				$('.edit').click(function(){
+					$(this).toggleClass('a');
+					if($(this).hasClass('a')){
+						$('.choose').show();//显示打钩按钮
+						$('.bottom').show();//显示底部的删除按钮
+						$(this).text('取消');
+					}else{
+						$('.choose').hide();
+						$('.bottom').hide();
+						$(this).text('编辑');
+					}
+				})
+				//选项按钮
+				$('.choose').click(function(){
+					$(this).find('i').toggleClass('active');
+					var listN=$(this).parents('.list').children().length;
+					var chooseN=$(this).parents('.list').find('.active').length;
+					if(listN==chooseN){
+						$('.chooseAll').addClass('active1');
+					}else{
+						$('.chooseAll').removeClass('active1');
+					}
+					console.log(listN,chooseN)
+				})
+				
+				//全部删除按钮
+				$('.bottom dt').click(function(){
+					var listN=$('.list li').length;
+					$('.chooseAll').toggleClass('active1');
+					if($('.chooseAll').hasClass('active1')){
+						$('.chooseOne').addClass('active');
+					}else{
+						$('.chooseOne').removeClass('active');
+					}
+				})
+				//删除数据
+				$('.del').click(function(){
+					$('.active').parents('li').remove();
+					$('.chooseAll').removeClass('active1');
+					
+				})
+			})
+		</script>
+	</body>
+</html>

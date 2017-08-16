@@ -1,0 +1,12 @@
+body { background: #f1f1f1; }
+
+#outerWrap { width: 100%; }
+#outerWrap #top .confirm { width: .8rem; color: #fff; text-align: right; }
+#outerWrap .content { width: 100%; padding: .3rem 0 0; box-sizing: border-box; }
+#outerWrap .content .menu { width: 100%; }
+#outerWrap .content .menu li { width: 100%; height: 1rem; margin-bottom: .01rem; padding: 0 .4rem; background: #fff; box-sizing: border-box; display: flex; align-items: center; }
+#outerWrap .content .menu li p { height: 100%; margin-right: .9rem; display: flex; align-items: center; }
+#outerWrap .content .menu li p i { width: .36rem; height: .36rem; margin-right: .2rem; box-sizing: border-box; border: .02rem solid #999; border-radius: 50%; }
+#outerWrap .content .menu li p .active { background: url(../img/sex-select.jpg) no-repeat center center; background-size: .36rem; border: 0; }
+
+/*# sourceMappingURL=sex.css.map */

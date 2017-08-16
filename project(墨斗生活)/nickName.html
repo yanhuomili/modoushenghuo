@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>昵称</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nickName.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">昵称</div>
+				<div class="empty confirm">确认</div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<ul class="menu">
+					<li>
+						<input type="text" name="" class="nameIpt" placeholder="填写您的昵称" />
+						<i class="del"></i>
+					</li>
+				</ul>
+				<div>字数限制2~8字</div>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.del').click(function(){
+					$(this).prev().val('').focus();
+				})
+				
+				
+				$('.confirm').click(function(){
+					var val=$('.nameIpt').val();
+					if(val){
+						localStorage.setItem('nickName',val);
+						newVal=localStorage.getItem('nickName');
+						window.history.go(-1);
+					}
+				})
+				
+			})
+		</script>
+	</body>
+</html>

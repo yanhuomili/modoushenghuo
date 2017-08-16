@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人相册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/photos.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">个人相册</div>
+				<div class="empty"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<ul class="photo">
+					<li><img src="img/photo2.jpg"/><img src="img/photo4.jpg"/></li>
+					<li><img src="img/photo1.jpg"/></li>
+					<li><img src="img/photo10.jpg"/></li>
+
+				</ul>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var vH=document.documentElement.clientHeight;//浏览器可视高度
+				var arr=[
+				{url:'img/photo11.jpg'},
+				{url:'img/photo2.jpg'},
+				{url:'img/photo3.jpg'},
+				{url:'img/photo4.jpg'},
+				{url:'img/photo5.jpg'},
+				{url:'img/photo6.jpg'},
+				{url:'img/photo7.jpg'},
+				{url:'img/photo8.jpg'},
+				{url:'img/photo9.jpg'},
+				{url:'img/photo10.jpg'},
+				];
+				run(arr);
+				function run(arr){
+					for(var i=0;i<arr.length;i++){
+						var img=new Image();
+						img.src=arr[i].url;
+						(function(i){//使用闭包就不会出现不按顺序加载的问题了 
+							img.onerror=function(){//监听图片加载错误
+								console.log('加载错误')
+							}
+							img.onload=function(){//监听图片正确加载
+								var Img=document.createElement('img');
+								Img.src=arr[i].url;
+								var li=$('.photo li');
+								var index=minLi();
+								li.eq(index).append(Img);
+							}
+						})(i)
+					}
+				}
+				//高度最小的li
+				minLi();
+				function minLi(){
+					var li=$('.photo li');
+					var len=li.length;
+					var num=0;
+					var h=10000;
+					for(var i=0;i<len;i++){
+						var liH=li.eq(i).height();
+						if(liH<h){
+							h=liH;
+							num=i;
+						}
+					}
+					return num;
+				}
+				
+				//滚动事件
+				window.onscroll=function(){
+					var st=document.documentElement.scrollTop||document.body.scrollTop;
+					if(st+vH>document.body.scrollHeight*0.9){
+						run(arr)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

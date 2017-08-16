@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工作技能</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/workSkill.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">工作技能</div>
+				<div class="empty edit">编辑</div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<ul class="menu">
+					<li>
+						<input type="text" name="" class="nameIpt" placeholder="填写您的技能" />
+						<i class="add">添加</i>
+					</li>
+				</ul>
+				<div>字数限制3~30字</div>
+				<ul class="skillList">
+					<li><i>修水管</i><b class="del"></b></li>
+					<li><i>修水管</i><b class="del"></b></li>
+					<li><i>前端工程师</i><b class="del"></b></li>
+					<li><i>后端程序猿</i><b class="del"></b></li>
+				</ul>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//添加技能
+				$('.add').click(function(){
+					var val=$('.nameIpt').val();
+					if(val){
+						var li='<li><i>'+val+'</i><b class="del"></b></li>';
+						$('.skillList').append(li);
+						$('.nameIpt').val('');
+					}
+				})
+				
+				//编辑
+				$('.edit').click(function(){
+					$(this).toggleClass('ed');
+					if($(this).hasClass('ed')){//编辑
+						$(this).text('取消');
+						$('.del').show();
+					}else{//取消编辑
+						$(this).text('编辑');
+						$('.del').hide();
+					}
+				})
+				//删除技能
+				$('.skillList').on('click','.del',function(){
+					console.log($(this))
+					var index=$(this).parent().index();
+					console.log(index);
+					$(this).parent().remove()
+				})
+				
+				
+			})
+		</script>
+	</body>
+</html>

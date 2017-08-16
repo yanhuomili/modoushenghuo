@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>银行卡信息</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bankCard.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">银行卡信息</div>
+				<div class="empty"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<form>
+					<div>
+						<label>填写用户名</label>
+						<input type="text" name="" id="" placeholder="请填写用户民名" />
+					</div>
+					<div>
+						<label>选择所属银行</label>
+						<p class="selectBank">
+							<i class="bank">请选择所属银行</i><b class=""><img src="img/jiezhi-gt.jpg"/></b>
+						</p>
+						<ul class="bankList">
+								<li>中国银行</li>
+								<li>农业银行</li>
+								<li>浦发银行</li>
+								<li>广发银行</li>
+						</ul>
+					</div>
+					<div>
+						<label>填写开行户地址</label>
+						<input type="text" name="" id="" placeholder="请填写开行户地址" />
+					</div>
+					<div>
+						<label>填写银行卡号</label>
+						<input type="text" name="" id="cardNum" placeholder="请填写银行卡号" />
+					</div>
+					<input type="submit" class="sure" value="确认"/>
+				</form>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.sureBtn').click(function(){
+					alert('确定申请');
+				})
+				//选择银行
+				$('.selectBank').click(function(){
+					$('.bankList').show();
+				})
+				$('.bankList li').click(function(){
+					var val=$(this).text();
+					$('.bank').text(val);
+					$('.bankList').hide();
+				})
+				$('#cardNum').get(0).oninput=function(){
+					var val=this.value;
+					var len=val.length;
+					var str='';
+					for(var i=0;i<len;i++){
+						var n=val[i];
+						if(i>9&&i<17){
+							n='*';
+						}
+						str+=n;
+					}
+					console.log(str)
+					this.value=str;
+				}
+			})
+		</script>
+	</body>
+</html>

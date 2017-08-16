@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>系统设置</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/systemSet.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">系统设置</div>
+				<div class="empty"></div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<ul class="menu">
+					<li>
+						<i>推送设置</i>
+						<p class="switch"><span class="switchBtn"></span></p>
+					</li>
+					<li class="modify">
+						<i>修改密码</i>
+						<p><b></b></p>
+					</li>
+					<li>
+						<i>系统版本</i>
+						<p><span>v1.0</span></p>
+					</li>
+					<li>
+						<i>清除缓存</i>
+						<p><span>1.7M</span><b></b></p>
+					</li>
+				</ul>
+				<a href="###" class="loginOut">退出</a>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//推送消息开关
+				$('.switch').click(function(){
+					$(this).toggleClass('active');
+					if($(this).hasClass('active')){
+						alert('推送');
+					}else{
+						alert('不推送');
+					}
+				})
+				//修改密码
+				$('.modify').click(function(){
+					window.location="modifyPassword.html";
+				})
+			})
+		</script>
+	</body>
+</html>

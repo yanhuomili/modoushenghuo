@@ -1,0 +1,28 @@
+body { background: #f1f1f1; }
+
+#outerWrap { width: 100%; }
+#outerWrap .content { width: 100%; padding: .3rem 0 0; box-sizing: border-box; }
+#outerWrap .content .user { width: 100; height: 1.2rem; padding: 0 .3rem; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+#outerWrap .content .user p { display: flex; }
+#outerWrap .content .user p i { width: .9rem; height: .9rem; margin-right: .3rem; }
+#outerWrap .content .user .apply { width: 1.5rem; height: .6rem; line-height: .6rem; text-align: center; color: #fff; background: #dfdfdf; border-radius: .15rem; }
+#outerWrap .content .user .active { background: #0bc01d; }
+#outerWrap .content .bankInfo { width: 100%; height: 1.2rem; padding: 0 .3rem; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; background: #fff; margin: .06rem 0 .5rem; }
+#outerWrap .content .bankInfo .changeInfo { height: .5rem; display: flex; justify-content: center; align-items: center; }
+#outerWrap .content .bankInfo .changeInfo b { display: inline-block; width: .16rem; height: 100%; margin-left: .1rem; background: url(../img/bank-gt.jpg) no-repeat center center; background-size: .16rem .28rem; }
+#outerWrap .content .bankInfo em { display: inline-block; width: 1rem; height: .6rem; background: url(../img/cross.jpg) no-repeat center center; background-size: .5rem; }
+#outerWrap .content .record { width: 100%; }
+#outerWrap .content .record h3 { width: 100%; height: .9rem; display: flex; align-items: center; background: #fff; margin-bottom: .04rem; padding: 0 .3rem; box-sizing: border-box; }
+#outerWrap .content .record h3 i { width: .1rem; height: .36rem; margin-right: .25rem; }
+#outerWrap .content .record .recordList { width: 100%; }
+#outerWrap .content .record .recordList li { width: 100%; height: 1.2rem; padding: 0 .3rem; background: #fff; margin-bottom: .04rem; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; }
+#outerWrap .content .record .recordList li p { display: flex; flex-direction: column; justify-content: center; }
+#outerWrap .content .record .recordList li p i { margin-bottom: .15rem; }
+#outerWrap .content .record .recordList li p em { font-size: .22rem; color: #666; }
+#outerWrap .content .record .recordList li span { width: 1.2rem; height: .6rem; line-height: .6rem; text-align: center; background: #0bc11e; color: #fff; border-radius: .1rem; }
+#outerWrap .content .record .recordList li .active1 { background: #0bc11e; color: #fff; }
+#outerWrap .content .record .recordList li .active2 { background: #b0b0b0; color: #fff; }
+#outerWrap .content .record .recordList li .active3 { background: #dfdfdf; color: #999; }
+#outerWrap .content .record .recordList li .active4 { background: #ff7141; color: #fff; }
+
+/*# sourceMappingURL=myBorrow.css.map */

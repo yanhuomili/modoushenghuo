@@ -1,0 +1,11 @@
+body { background: #f1f1f1; }
+
+#outerWrap { width: 100%; }
+#outerWrap .content { width: 100%; }
+#outerWrap .content .return { position: fixed; z-index: 999; padding: .3rem .2rem; box-sizing: border-box; }
+#outerWrap .content .return .goBack { display: inline-block; width: .8rem; height: .8rem; border-radius: .1rem; background: rgba(255, 255, 255, 0.8) url(../img/map-goBack.png) no-repeat center center; background-size: .2rem .36rem; }
+#outerWrap .content #mapDetail { width: 100%; height: 13.34rem; }
+
+@media screen and (min-width: 1000px) { .return { width: 1000px !important; margin: 0 auto !important; } }
+
+/*# sourceMappingURL=mapDetail.css.map */

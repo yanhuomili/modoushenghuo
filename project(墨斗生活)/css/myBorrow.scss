@@ -1,0 +1,144 @@
+@charset "utf-8";
+body{
+    background: #f1f1f1;
+}
+#outerWrap{
+    width:100%;
+    .content{
+        width:100%;
+        padding: .3rem 0 0;
+        box-sizing: border-box;
+        .user{
+            width:100;
+            height:1.2rem;
+            padding: 0 .3rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            p{
+                display: flex;
+                i{
+                    width:.9rem;
+                    height:.9rem;
+                    margin-right: .3rem;
+                }
+            }
+            .apply{
+                width:1.5rem;
+                height:.6rem;
+                line-height: .6rem;
+                text-align: center;
+                color: #fff;
+                background: #dfdfdf;
+                border-radius: .15rem;
+            }
+            .active{
+                background: #0bc01d;
+            }
+        }
+        .bankInfo{
+            width:100%;
+            height:1.2rem;
+            padding: 0 .3rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            margin: .06rem 0 .5rem;
+            .changeInfo{
+                height:.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                b{
+                    display: inline-block;
+                    width:.16rem;
+                    height:100%;
+                    margin-left: .1rem;
+                    background: url(../img/bank-gt.jpg) no-repeat center center;
+                    background-size: .16rem .28rem;
+                }
+            }
+            em{
+                display: inline-block;
+                width:1rem;
+                height:.6rem;
+                background: url(../img/cross.jpg) no-repeat center center;
+                background-size: .5rem;
+            }
+        }
+        .record{
+            width: 100%;
+            h3{
+                width:100%;
+                height:.9rem;
+                display: flex;
+                align-items: center;
+                background: #fff;
+                margin-bottom: .04rem;
+                padding: 0 .3rem;
+                box-sizing: border-box;
+                i{
+                    width:.1rem;
+                    height:.36rem;
+                    margin-right: .25rem;
+                }
+            }
+            .recordList{
+                width:100%;
+                li{
+                    width:100%;
+                    height:1.2rem;
+                    padding: 0 .3rem;
+                    background: #fff;
+                    margin-bottom: .04rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        i{
+                            margin-bottom: .15rem;
+                        }
+                        em{
+                            font-size: .22rem;
+                            color: #666;
+                        }
+                    }
+                    span{
+                        width:1.2rem;
+                        height:.6rem;
+                        line-height: .6rem;
+                        text-align: center;
+                        background: #0bc11e;
+                        color: #fff;
+                        border-radius: .1rem;
+                    }
+                    .active1{
+                        background: #0bc11e;
+                        color: #fff;
+                    }
+                    .active2{
+                        background: #b0b0b0;
+                        color: #fff;
+                    }
+                    .active3{
+                        background: #dfdfdf;
+                        color: #999;
+                    }
+                    .active4{
+                        background: #ff7141;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+

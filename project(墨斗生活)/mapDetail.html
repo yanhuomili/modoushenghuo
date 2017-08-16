@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>地图详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mapDetail.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section class="content">
+				<div class="return"><span class="goBack"></span></div>
+				<div id="mapDetail">
+					
+				</div>	
+			</section>
+		</div>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//百度地图api功能
+				var map = new BMap.Map("mapDetail"); // 创建地图实例  
+				map.enableScrollWheelZoom(true);
+				var point = new BMap.Point(113.273, 23.157); // 创建点坐标  
+				map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别
+				var marker = new BMap.Marker(new BMap.Point(113.273, 23.157)); // 创建点
+				var circle = new BMap.Circle(point,500,{strokeColor:"red", strokeWeight:2, strokeOpacity:0.5,fillColor:"red",fillOpacity:0.15}); //创建圆//增加点
+				var opts = {
+				  position : point,    // 指定文本标注所在的地理位置
+				  offset : new BMap.Size(0,0)    //设置文本偏移量
+				}
+				var label = new BMap.Label("广州苹果公司(总部);白云区云城西路M8创意园A栋401C", opts);  // 创建文本标注对象
+				label.setStyle({
+					 color : "black",
+					 fontSize : "28px",
+//					 height : "100px",
+//					 width:"300px",
+//					 lineHeight : "50px",
+					 fontFamily:"微软雅黑"
+				 });
+				map.addOverlay(marker);
+				map.addOverlay(circle);
+				map.addOverlay(label);
+			})
+		</script>
+	</body>
+</html>

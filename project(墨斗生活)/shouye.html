@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shouye.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<header class="header">
+				<div class="left region">
+					<i>广州</i>
+					<b></b>
+				</div>
+				<div class="title"><img src="img/shouye_tietle.png"/></div>
+				<div class="right loginBtn"></div>
+			</header>
+			<section class="banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/shouye_banner.png"/></div>
+						<div class="swiper-slide"><img src="img/shouye_banner.png"/></div>
+						<div class="swiper-slide"><img src="img/shouye_banner.png"/></div>
+						<div class="swiper-slide"><img src="img/shouye_banner.png"/></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<input type="text"  class="search" placeholder="请输入您需要搜索的职位" />
+			</section>
+			<section class="menu">
+				<ul class="menuList">
+					<li><b><img src="img/sjouye_1.png"/></b><i>生产工</i></li>
+					<li><b><img src="img/sjouye_2.png"/></b><i>技工</i></li>
+					<li><b><img src="img/sjouye_3.png"/></b><i>销售</i></li>
+					<li><b><img src="img/sjouye_4.png"/></b><i>客服</i></li>
+					<li><b><img src="img/sjouye_5.png"/></b><i>促销</i></li>
+					<li><b><img src="img/sjouye_6.png"/></b><i>快递</i></li>
+					<li><b><img src="img/sjouye_7.png"/></b><i>司机</i></li>
+					<li><b><img src="img/sjouye_8.png"/></b><i>全部</i></li>
+				</ul>
+			</section>
+			<section class="jobList">
+				<h3 class="hot"><i><img src="img/shouye_tuijian.png"/></i><span>热门推荐</span></h3>
+				<ul class="">
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+					<li>
+						<div class="positions"><i>销售顾问</i></div>
+						<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+						<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+					</li>
+				</ul>
+			</section>
+			
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/swiper.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var myswiper=new　Swiper('.swiper-container',{
+					direction:'horizontal',
+					autoplayDisableOnInteraction:false,//用户操作滑块后重新启动
+					loop:false,
+					pagination:'.swiper-pagination',
+					preventClicksPropagation:true,//阻止冒泡事件，但是不能阻止手机端的点透事件
+					autoplay:2000
+				})
+				//登录图标
+				$('.loginBtn').click(function(){
+					window.location="login.html";
+				})
+				//定位
+				$('.region').click(function(){
+					window.location="dingwei.html";
+				})
+				//职位类别
+				$('.menuList li').click(function(){
+					window.location="classify.html";
+				})
+				//职位详情
+				$('.jobList li').click(function(){
+					window.location="jobInformation.html";
+				})
+				//职位搜索
+				$('.search').click(function(){
+					window.location="sousuo.html";
+				})
+				
+				var bb=navigator.geolocation.watchPosition
+				console.log(bb)
+			})
+		</script>
+	</body>
+</html>

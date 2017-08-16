@@ -1,0 +1,5 @@
+在重置文件里面把下面样式注释掉
+html,body{
+    height:100%;
+    overflow: hidden;
+}

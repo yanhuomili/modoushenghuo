@@ -1,0 +1,18 @@
+body { background: #fff; }
+
+#outerWrap { width: 100%; }
+#outerWrap .content { width: 100%; height: 100%; padding: 0 .2rem; box-sizing: border-box; }
+#outerWrap .content .jobDetail { width: 100%; color: #333; background: #fff; }
+#outerWrap .content .jobDetail h3 { width: 100%; height: .8rem; font-size: .3rme; display: flex; align-items: center; border-bottom: .01rem solid #eee; margin-bottom: .3rem; }
+#outerWrap .content .jobDetail h3 em { width: .06rem; height: .32rem; margin-right: .1rem; }
+#outerWrap .content .jobDetail > div { width: 100%; padding: 0 .25rem .4rem; box-sizing: border-box; }
+#outerWrap .content .jobDetail > div p { color: #666; letter-spacing: .02rem; margin-bottom: .1rem; display: flex; }
+#outerWrap .content .jobDetail > div p i { margin-right: .2rem; }
+#outerWrap .content .jobDetail > div p span { width: 5rem; }
+#outerWrap .content .companyIntroduce { width: 100%; background: #fff; }
+#outerWrap .content .companyIntroduce h3 { width: 100%; height: .7rem; box-sizing: border-box; font-size: .3rme; display: flex; align-items: center; border-bottom: .01rem solid #eee; margin-bottom: .2rem; }
+#outerWrap .content .companyIntroduce h3 em { width: .06rem; height: .32rem; margin-right: .1rem; }
+#outerWrap .content .companyIntroduce > div { width: 100%; color: #666; }
+#outerWrap .content .companyIntroduce > div P { text-indent: .5rem; line-height: 1.5; letter-spacing: .02rem; padding-bottom: .3rem; box-sizing: border-box; }
+
+/*# sourceMappingURL=companyIntroduction.css.map */

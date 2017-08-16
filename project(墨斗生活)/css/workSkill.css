@@ -1,0 +1,17 @@
+body { background: #f1f1f1; }
+
+#outerWrap { width: 100%; }
+#outerWrap #top .edit { width: .8rem; color: #fff; text-align: right; }
+#outerWrap .content { width: 100%; padding: .3rem 0 0; box-sizing: border-box; }
+#outerWrap .content .menu { width: 100%; }
+#outerWrap .content .menu li { width: 100%; height: 1rem; margin-bottom: .01rem; padding: 0 .3rem; background: #fff; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+#outerWrap .content .menu li input { width: 80%; height: 70%; border: 0; outline: 0 none; font-size: .28rem; }
+#outerWrap .content .menu li .add { width: 1.6rem; height: 1rem; line-height: 1rem; text-align: center; background: #ff4445; color: #fff; margin-right: -.3rem; }
+#outerWrap .content div { padding: 0 .3rem; line-height: .5rem; color: #999; box-sizing: border-box; margin-bottom: .3rem; }
+#outerWrap .content .skillList { padding: 0 .3rem; display: flex; align-items: center; flex-wrap: wrap; color: #666; }
+#outerWrap .content .skillList li { padding: .2rem .3rem; box-sizing: border-box; border: .01rem solid #bfbfbf; border-radius: .15rem; margin: 0 .4rem .4rem 0; background: #fff; position: relative; }
+#outerWrap .content .skillList li b { display: inline-block; width: .6rem; height: .6rem; background: url(../img/del.jpg) no-repeat center center; background-size: .4rem; position: absolute; top: -.3rem; right: -.3rem; display: none; }
+
+@media screen and (min-width: 1000px) { .confirm { width: 1000px !important; margin: 0 auto !important; } }
+
+/*# sourceMappingURL=workSkill.css.map */

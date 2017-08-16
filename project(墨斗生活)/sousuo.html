@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sousuo.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title"><input type="text" name="" class="search" placeholder="企业名称/岗位类型" /><i class="del"></i></div>
+				<div class="empty searchBtn">搜索</div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<div class="jobList">
+					<ul class="">
+						<!--<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>
+						<li>
+							<div class="positions"><i>销售顾问</i></div>
+							<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>
+							<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>
+						</li>-->
+					</ul>
+					
+				</div>
+				<div class="pageFill"></div>
+				<div class="zzsc">
+					<!--currentpage="1" numbercount="100"-->
+					<!--在这里设置最多显示的页数和每页显示信息的个数-->
+					<ul class="page" maxshowpageitem="5" pagelistcount="6" id="page"></ul>
+				</div>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/page.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.search').attr('placeholder')
+				$('.del').click(function(){
+					$('.search').val('').focus();
+				})
+				
+				//点击搜索
+				$('.searchBtn').click(function(){
+					var val=$('.search').val();
+					console.log(val);
+				})
+				$('.jobList li').click(function(){
+					window.location="jobInformation.html";
+				})
+				run()
+				function run(n1,n2){
+					var arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32];
+					var len=arr.length;
+					$("#page").initPage(len, 1, kk);
+					function kk(mm) {
+	//					alert(mm)
+						var n=mm-1;
+						$('.jobList ul').html('');
+						for(var j=n*6;j<n*6+6;j++){//设置每页显示信息的个数，要和pagelistcount属性里面的值相对应
+							if(arr[j]){//如果数据库中没有了就不再追加
+								var st='<li>'
+										+'<div class="positions"><i>销售顾问'+arr[j]+'</i></div>'
+										+'<div><p class="company"><i>广州苹果公司(总部)</i></p><p><em class="salary">40000-50000元/月</em><b><img src="img/gt.jpg"/></b></p></div>'
+										+'<div><p><i>五险一金</i><i>包吃包住</i></p><p>500米以内</p></div>'
+									+'</li>';	
+								$('.jobList ul').append(st);
+							}
+						}
+					}
+				
+				}
+			})
+		</script>
+	</body>
+</html>

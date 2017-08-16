@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>性别</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sex.css"/>
+	</head>
+	<body>
+		<div id="outerWrap">
+			<section id="top">
+				<div class="goBack"></div>
+				<div class="title">性别</div>
+				<div class="empty confirm">确认</div>
+			</section>
+			<section id="topFill"></section>
+			<section class="content">
+				<ul class="menu">
+					<li>
+						<p><i class="isSelect" data="0"></i><span>男</span></p>
+						<p><i class="isSelect" data="1"></i><span>女</span></p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/phoneadaptation.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//选择性别
+				$('.menu p').click(function(){
+					$(this).find('i').addClass('active').parent().siblings().find('i').removeClass('active');
+				})
+				//确定
+				$('.confirm').click(function(){
+					var index=$('.active').attr('data');
+					if(index==0){
+						localStorage.setItem('sex','男');
+						console.log('男');
+						
+					}else{
+						localStorage.setItem('sex','女');
+						console.log('女');
+					}
+					window.history.go(-1);
+				})
+			})
+		</script>
+	</body>
+</html>
