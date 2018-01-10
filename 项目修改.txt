@@ -3,3 +3,14 @@ html,body{
     height:100%;
     overflow: hidden;
 }
+2018-1-10将整个项目clone到本地之后做了一点点修改。修改git项目的时候，每次更改都要先克隆到本地，在本地修改完之后再重新提交。
+步骤：
+1.在本地新建一个文件夹
+2.使用git bash命令行工具进入该文件夹
+3.git clone github项目的链接，把项目克隆岛本地
+4.cd 克隆下来的文件夹名称    进入项目
+5.修改项目或者添加文件  修改完之后还需要重新上传
+git add .
+git commit -m "更改信息备注"
+git push origin master
+
